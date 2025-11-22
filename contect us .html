@@ -4,6 +4,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
+  <script src="https://kit.fontawesome.com/64d58efce2.js"
+  crossorigin="anonymous"></script>
   <style>
     *{
       margin: 0;
@@ -192,12 +194,106 @@ margin: 0;
   
 
   }
+  
+  .contact-info{
+    padding: 2.3rem 2.2rem;
+    position: relative;
+  }
+
+  .contact-info .title{
+    color: #1abc9c;
+
+  }
+  .text{
+    color: #333;
+    margin: 1.5rem 0 2rem 0;
+  }
+
+  .information{
+    display: flex;
+    color: #555;
+    margin: 0.7rem 0;
+    align-items: center;
+    font-size: 0.95rem;
+  }
+  .icon{ 
+    width: 28px;
+    margin-right: 0.7rem;
+  }
+  .contact-info:before{
+    content: "";
+    position: absolute;
+    width: 110px;
+    height: 100px;
+    border: 22px solid #1abc9c;
+    border-radius: 50%;
+    bottom: -77px;
+    right: 50px;
+    opacity: 0.3;
+  }
+  .big-circle{
+    position: absolute;
+    width: 500px;
+    height: 500px;
+    border-radius: 50%;
+    background: linear-gradient(to bottom, #1abc9c, #159b80);
+    bottom: 50%;
+    right: 50%;
+    transform: translate(-40%, 83%);
+  }
+  .big-circle:after{
+    content: "";
+    position: absolute;
+    width: 360px;
+    height: 360px;
+    background-color: #fafafa;
+    border-radius: 50%;
+    top: calc(50% -180px);
+     left: calc(50% -180px);
+  }
   </style>
 </head>
 <body>
   <div class="container">
+    <span class="big-circle"></span>
     <div class="form">
-      <div class="contact-info"></div>
+      <div class="contact-info">
+        <h3 class="title">Let's get in touch</h3>
+        <p class="text">Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+    
+        </p>
+        <div class="info">
+          <div class="information">
+            <img src="pin_3060043.png" class="icon" alt="">
+            <p>92 Cherry Drive Uniondale, NY 11553</p>
+          </div>
+           <div class="information">
+            <img src="email_5193255.png" class="icon" alt="">
+            <p>moazgaming026@gmail.com</p>
+          </div>
+           <div class="information">
+            <img src="telephone-call_3059590.png" class="icon" alt="">
+            <p>+2015020363</p>
+          </div>
+          <div class="social-media">
+            <p>Connect with us:</p>
+            <div class="social-icon">
+              <a href="#">
+             <i class="fab fa-facbook"></i>
+              </a>
+                 <a href="#">
+             <i class="fab fa-twitter"></i>
+              </a>
+                 <a href="#">
+             <i class="fab fa-instagram"></i>
+              </a>
+                <a href="#">
+             <i class="fab fa-linked-in"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
 
       <div class="contact-form">
         <span class="circle one"></span> 
@@ -224,7 +320,7 @@ margin: 0;
           <span>Phone</span>
         </div>
 
-         <div class="input-container textarea focus">
+         <div class="input-container textarea ">
           <textarea name="message" class="input"></textarea>
        <label for="">Message</label>
        <span>Message</span>
@@ -235,7 +331,22 @@ margin: 0;
     </div>
   </div>
   <script>
-    
+    const inputs = document.querySelectorAll("input")
+    function focusfunce() { 
+      let parent = this.parentNode;
+      parent.classList.add("focus");
+    }
+        function blurfunce() {     
+      let parent = this.parentNode;
+      if (this.value ==""){   
+      parent.classList.remove("focus");
+      
+    }
+  }
+    inputs.forEach(input => {
+      input.addEventListener("focus",focusfunce);
+            input.addEventListener("blur",blurfunce);
+    })
   </script>
 </body>
 </html>
