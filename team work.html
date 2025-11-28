@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Team Work</title>
+<style>
+    body {
+    font-family: Arial, sans-serif;
+    background: #eef3f9;
+    margin: 0;
+    padding: 20px;
+}
+
+.title {
+    text-align: center;
+    font-size: 40px;
+    margin-bottom: 40px;
+}
+
+.team-container {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    flex-wrap: wrap;
+}
+
+.card {
+    background: white;
+    width: 260px;
+    padding: 20px;
+    border-radius: 20px;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+}
+
+.card img {
+    width: 110px;
+    border-radius: 50%;
+}
+
+.card h3 {
+    margin: 15px 0 5px;
+    font-size: 22px;
+}
+
+.card p {
+    color: #555;
+    margin-bottom: 15px;
+}
+
+.card button {
+    background: #007bff;
+    color: white;
+    padding: 10px 18px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.card button:hover {
+    background: #0056b3;
+}
+
+</style>
+</head>
+<body>
+
+    <h1 class="title">Our Team</h1>
+
+    <div class="team-container">
+        <div class="card">
+            <img src="https://i.imgur.com/1XQZ1Zm.png" alt="Member">
+            <h3>moaz ahmed</h3>
+            <p>Web Developer</p>
+            <button onclick="showInfo('John Smith - Web Developer')">More Info</button>
+        </div>
+
+        <div class="card">
+            <img src="https://i.imgur.com/1XQZ1Zm.png" alt="Member">
+            <h3>malek ahmed</h3>
+            <p>UI/UX Designer</p>
+            <button onclick="showInfo('Emily Johnson - UI/UX Designer')">More Info</button>
+        </div>
+
+        <div class="card">
+            <img src="https://i.imgur.com/1XQZ1Zm.png" alt="Member">
+            <h3>adam</h3>
+            <p>Project Manager</p>
+            <button onclick="showInfo('Michael Brown - Project Manager')">More Info</button>
+        </div>
+        
+    <div class="team-container">
+        <div class="card">
+            <img src="https://i.imgur.com/1XQZ1Zm.png" alt="Member">
+            <h3>mohamed</h3>
+            <p>Web Developer</p>
+            <button onclick="showInfo('John Smith - Web Developer')">More Info</button>
+        </div>
+        
+    <div class="team-container">
+        <div class="card">
+            <img src="https://i.imgur.com/1XQZ1Zm.png" alt="Member">
+            <h3>yossef</h3>
+            <p>Web Developer</p>
+            <button onclick="showInfo('John Smith - Web Developer')">More Info</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
