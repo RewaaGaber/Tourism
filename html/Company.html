@@ -1,30 +1,90 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+  </head>
+<style>
+   body { margin: 0;
+     font-family: Arial, sans-serif; 
+     background: #fff; 
+     color: #333; 
+
+  }
+    /* NAVIGATION */ 
+    .nav { display: flex;
+       justify-content: space-between;
+        padding: 20px 50px;
+         font-weight: bold;
+         } 
+         .nav a { margin-right: 25px;
+           text-decoration: none;
+            color: #000; }
+             .nav .home { background: orange;
+               color: white !important; 
+               padding: 8px 12px;
+                border-radius: 6px;
+               } /* HERO SECTION */ 
+               .container { display: flex;
+                 justify-content: space-between;
+                  padding: 40px 60px;
+                   align-items: center; } 
+                   .text-box {
+                     max-width: 450px; }
+                    .text-box h2 { font-style: italic;
+                       color: #c67a2c; 
+                       font-size: 30px; 
+                       margin-bottom: 5px; } 
+                       .text-box h1 { font-size: 80px;
+                         margin: 0; 
+                         font-family: Georgia, serif; }
+
+   .text-box p {
+     color: #666;
+     line-height: 1.5; } .btn {
+       display: inline-block;
+        margin-top: 20px;
+         background: orange;
+          color: #fff;
+           padding: 12px 20px;
+            border-radius: 25px;
+             text-decoration: none;
+              font-weight: bold;
+             } 
+             /* HEXAGON IMAGE */ 
+             .hexagon { width: 380px;
+              height: 330px;
+            
+               background-size: cover;
+                clip-path: polygon( 25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50% );
+               }
+                /* RESPONSIVE */ 
+                @media (max-width: 900px) 
+                { .container { flex-direction: column;
+                   text-align: center; } 
+                   .hexagon { margin-top: 30px; } 
+                   .text-box h1 { font-size: 50px; } }
+  </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Document</title>
 </head>
-<body>
-<nav class="navbar navbar-expand-lg bg-body-tertiary">
-    <div "><img src="exto.png" width="50px"></div>
-  <div class="container-fluid">
-    <a class="navbar-brand" href="#">Navbar</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-      <div class="navbar-nav">
-        <a class="nav-link active" aria-current="page" href="home.html">Home</a>
-        <a class="nav-link" href="Buy tickets.html">Buy tickets</a>
-        <a class="nav-link" href="#">future</a>
-        <a class="nav-link disabled" aria-disabled="true">Disabled</a>
-      </div>
-    </div>
-  </div>
-</nav>
-  <!-- Navbar content -->
-</nav>
+
+  <body> <!-- NAV -->
+     <div class="nav"> 
+      <div> <a class="home" href="#">HOME</a> 
+        <a href="#">ABOUT US</a> <a href="#">BLOG</a> 
+        <a href="#">CONTACT</a> </div> <div>YOUR LOGO</div> 
+      </div> 
+      <!-- HERO SECTION -->
+        <div class="container"> 
+          <div class="text-box"> 
+            <h2>Welcome to</h2>
+             <h1>Egypt</h1>
+              <p> Ancient Egypt had a complete writing system, political system and religious beliefs. The land of ancient Egypt is closely distributed along the Nile River Basin. </p>
+               <a class="btn" href="#">SEE MORE</a> 
+              </div> 
+              <div class="hexagon"></div>
+             </div>
+
 </body>
 </html>
