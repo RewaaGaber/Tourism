@@ -1,304 +1,90 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Tourism Company - Landing Page</title>
+  </head>
+<style>
+   body { margin: 0;
+     font-family: Arial, sans-serif; 
+     background: #fff; 
+     color: #333; 
 
-    <style>
-        /* Global */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: Arial, Helvetica, sans-serif;
-        }
+  }
+    /* NAVIGATION */ 
+    .nav { display: flex;
+       justify-content: space-between;
+        padding: 20px 50px;
+         font-weight: bold;
+         } 
+         .nav a { margin-right: 25px;
+           text-decoration: none;
+            color: #000; }
+             .nav .home { background: orange;
+               color: white !important; 
+               padding: 8px 12px;
+                border-radius: 6px;
+               } /* HERO SECTION */ 
+               .container { display: flex;
+                 justify-content: space-between;
+                  padding: 40px 60px;
+                   align-items: center; } 
+                   .text-box {
+                     max-width: 450px; }
+                    .text-box h2 { font-style: italic;
+                       color: #c67a2c; 
+                       font-size: 30px; 
+                       margin-bottom: 5px; } 
+                       .text-box h1 { font-size: 80px;
+                         margin: 0; 
+                         font-family: Georgia, serif; }
 
-        body {
-            color: #333;
-        }
+   .text-box p {
+     color: #666;
+     line-height: 1.5; } .btn {
+       display: inline-block;
+        margin-top: 20px;
+         background: orange;
+          color: #fff;
+           padding: 12px 20px;
+            border-radius: 25px;
+             text-decoration: none;
+              font-weight: bold;
+             } 
+             /* HEXAGON IMAGE */ 
+             .hexagon { width: 380px;
+              height: 330px;
+            
+               background-size: cover;
+                clip-path: polygon( 25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50% );
+               }
+                /* RESPONSIVE */ 
+                @media (max-width: 900px) 
+                { .container { flex-direction: column;
+                   text-align: center; } 
+                   .hexagon { margin-top: 30px; } 
+                   .text-box h1 { font-size: 50px; } }
+  </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        header {
-            width: 100%;
-            background: white;
-            padding: 20px 40px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            position: fixed;
-            top: 0;
-            left: 0;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.15);
-            z-index: 1000;
-        }
-
-        header h2 {
-            color: #0a6fae;
-            font-size: 28px;
-            font-weight: 700;
-        }
-
-        header nav {
-            display: flex;
-            gap: 20px;
-        }
-
-        header nav a {
-            text-decoration: none;
-            font-size: 16px;
-            color: #333;
-            font-weight: bold;
-        }
-
-        /* Hero Section */
-        .hero {
-            height: 100vh;
-            background: url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: flex-start;
-            padding: 0 60px;
-            color: white;
-            text-shadow: 0px 3px 8px rgba(0,0,0,0.6);
-        }
-
-        .hero h1 {
-            font-size: 60px;
-            font-weight: 800;
-        }
-
-        .hero p {
-            margin: 20px 0;
-            font-size: 22px;
-        }
-
-        .hero button {
-            padding: 14px 28px;
-            background: #0a6fae;
-            color: white;
-            border: none;
-            border-radius: 6px;
-            font-size: 18px;
-            cursor: pointer;
-        }
-
-        /* Section wrapper */
-        section {
-            padding: 80px 60px;
-            display: flex;
-            flex-direction: column;
-            gap: 40px;
-        }
-
-        section h2 {
-            font-size: 36px;
-            color: #0a6fae;
-            text-align: center;
-        }
-
-        /* About Section */
-        .about {
-            display: flex;
-            gap: 40px;
-            align-items: center;
-        }
-
-        .about img {
-            width: 50%;
-            border-radius: 12px;
-        }
-
-        .about-text {
-            width: 50%;
-            font-size: 18px;
-            line-height: 1.7;
-        }
-
-        /* Services */
-        .services {
-            display: flex;
-            justify-content: center;
-            gap: 30px;
-            flex-wrap: wrap;
-        }
-
-        .service-box {
-            width: 260px;
-            padding: 25px;
-            border-radius: 12px;
-            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
-            display: flex;
-            flex-direction: column;
-            gap: 15px;
-            text-align: center;
-        }
-
-        /* Destinations */
-        .destinations {
-            display: flex;
-            gap: 20px;
-            flex-wrap: wrap;
-            justify-content: center;
-        }
-
-        .destination {
-            width: 300px;
-            height: 220px;
-            border-radius: 12px;
-            background-size: cover;
-            background-position: center;
-            display: flex;
-            align-items: flex-end;
-            padding: 15px;
-            color: white;
-            font-size: 20px;
-            font-weight: bold;
-            text-shadow: 0 3px 8px rgba(0,0,0,0.7);
-        }
-
-        /* Contact */
-        .contact {
-            display: flex;
-            justify-content: center;
-        }
-
-        .contact form {
-            display: flex;
-            flex-direction: column;
-            width: 400px;
-            gap: 20px;
-        }
-
-        .contact input, .contact textarea {
-            padding: 12px;
-            border: 1px solid #aaa;
-            border-radius: 6px;
-        }
-
-        .contact button {
-            padding: 14px;
-            background: #0a6fae;
-            color: white;
-            border: none;
-            border-radius: 6px;
-            font-size: 18px;
-            cursor: pointer;
-        }
-
-        /* Footer */
-        footer {
-            background: #0a6fae;
-            padding: 20px;
-            text-align: center;
-            color: white;
-            margin-top: 40px;
-        }
-
-        /* Responsive */
-        @media (max-width: 850px) {
-            .about {
-                flex-direction: column;
-            }
-            .about img, .about-text {
-                width: 100%;
-            }
-        }
-    </style>
+  <title>Document</title>
 </head>
 
-<body>
-
-    <!-- Header -->
-    <header>
-        <h2>TravelWorld</h2>
-        <nav>
-            <a href="#about">About</a>
-            <a href="#services">Services</a>
-            <a href="#destinations">Destinations</a>
-            <a href="#contact">Contact</a>
-        </nav>
-    </header>
-
-    <!-- Hero -->
-    <section class="hero">
-        <h1>Your Journey Starts Here</h1>
-        <p>Explore the world with our premium tourism services.</p>
-        <button>Book Now</button>
-    </section>
-
-    <!-- About -->
-    <section id="about">
-        <h2>About Us</h2>
-
-        <div class="about">
-            <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1000&q=80" alt="About Image">
-
-            <div class="about-text">
-                <p>
-                    We are a leading tourism company specialized in creating unique travel experiences.
-                    Our team provides world-class service, customized tours, and unforgettable adventures
-                    across the most beautiful destinations around the globe.
-                </p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Services -->
-    <section id="services">
-        <h2>Our Services</h2>
-
-        <div class="services">
-            <div class="service-box">
-                <h3>Flight Booking</h3>
-                <p>We offer competitive flight prices to worldwide destinations.</p>
-            </div>
-            <div class="service-box">
-                <h3>Hotel Reservation</h3>
-                <p>Choose from thousands of top-rated hotels and resorts.</p>
-            </div>
-            <div class="service-box">
-                <h3>Tour Packages</h3>
-                <p>Exclusive guided tours designed for all travel styles.</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Destinations -->
-    <section id="destinations">
-        <h2>Top Destinations</h2>
-
-        <div class="destinations">
-            <div class="destination" style="background-image:url('https://images.unsplash.com/photo-1519125323398-675f0ddb6308');">
-                Maldives
-            </div>
-            <div class="destination" style="background-image:url('https://images.unsplash.com/photo-1505761671935-60b3a7427bad');">
-                Paris
-            </div>
-            <div class="destination" style="background-image:url('https://images.unsplash.com/photo-1473959383413-1f0b01f96d71');">
-                Egypt
-            </div>
-        </div>
-    </section>
-
-    <!-- Contact -->
-    <section id="contact">
-        <h2>Contact Us</h2>
-
-        <div class="contact">
-            <form>
-                <input type="text" placeholder="Your Name" required />
-                <input type="email" placeholder="Email Address" required />
-                <textarea rows="5" placeholder="Message"></textarea>
-                <button>Send Message</button>
-            </form>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer>
-        © 2025 TravelWorld. All Rights Reserved.
-    </footer>
+  <body> <!-- NAV -->
+     <div class="nav"> 
+      <div> <a class="home" href="#">HOME</a> 
+        <a href="#">ABOUT US</a> <a href="#">BLOG</a> 
+        <a href="#">CONTACT</a> </div> <div>YOUR LOGO</div> 
+      </div> 
+      <!-- HERO SECTION -->
+        <div class="container"> 
+          <div class="text-box"> 
+            <h2>Welcome to</h2>
+             <h1>Egypt</h1>
+              <p> Ancient Egypt had a complete writing system, political system and religious beliefs. The land of ancient Egypt is closely distributed along the Nile River Basin. </p>
+               <a class="btn" href="#">SEE MORE</a> 
+              </div> 
+              <div class="hexagon"></div>
+             </div>
 
 </body>
 </html>
