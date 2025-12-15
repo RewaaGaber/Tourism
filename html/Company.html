@@ -1,30 +1,304 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tourism Company - Landing Page</title>
+
+    <style>
+        /* Global */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        body {
+            color: #333;
+        }
+
+        header {
+            width: 100%;
+            background: white;
+            padding: 20px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: fixed;
+            top: 0;
+            left: 0;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+            z-index: 1000;
+        }
+
+        header h2 {
+            color: #0a6fae;
+            font-size: 28px;
+            font-weight: 700;
+        }
+
+        header nav {
+            display: flex;
+            gap: 20px;
+        }
+
+        header nav a {
+            text-decoration: none;
+            font-size: 16px;
+            color: #333;
+            font-weight: bold;
+        }
+
+        /* Hero Section */
+        .hero {
+            height: 100vh;
+            background: url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start;
+            padding: 0 60px;
+            color: white;
+            text-shadow: 0px 3px 8px rgba(0,0,0,0.6);
+        }
+
+        .hero h1 {
+            font-size: 60px;
+            font-weight: 800;
+        }
+
+        .hero p {
+            margin: 20px 0;
+            font-size: 22px;
+        }
+
+        .hero button {
+            padding: 14px 28px;
+            background: #0a6fae;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            font-size: 18px;
+            cursor: pointer;
+        }
+
+        /* Section wrapper */
+        section {
+            padding: 80px 60px;
+            display: flex;
+            flex-direction: column;
+            gap: 40px;
+        }
+
+        section h2 {
+            font-size: 36px;
+            color: #0a6fae;
+            text-align: center;
+        }
+
+        /* About Section */
+        .about {
+            display: flex;
+            gap: 40px;
+            align-items: center;
+        }
+
+        .about img {
+            width: 50%;
+            border-radius: 12px;
+        }
+
+        .about-text {
+            width: 50%;
+            font-size: 18px;
+            line-height: 1.7;
+        }
+
+        /* Services */
+        .services {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+        }
+
+        .service-box {
+            width: 260px;
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            text-align: center;
+        }
+
+        /* Destinations */
+        .destinations {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .destination {
+            width: 300px;
+            height: 220px;
+            border-radius: 12px;
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: flex-end;
+            padding: 15px;
+            color: white;
+            font-size: 20px;
+            font-weight: bold;
+            text-shadow: 0 3px 8px rgba(0,0,0,0.7);
+        }
+
+        /* Contact */
+        .contact {
+            display: flex;
+            justify-content: center;
+        }
+
+        .contact form {
+            display: flex;
+            flex-direction: column;
+            width: 400px;
+            gap: 20px;
+        }
+
+        .contact input, .contact textarea {
+            padding: 12px;
+            border: 1px solid #aaa;
+            border-radius: 6px;
+        }
+
+        .contact button {
+            padding: 14px;
+            background: #0a6fae;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            font-size: 18px;
+            cursor: pointer;
+        }
+
+        /* Footer */
+        footer {
+            background: #0a6fae;
+            padding: 20px;
+            text-align: center;
+            color: white;
+            margin-top: 40px;
+        }
+
+        /* Responsive */
+        @media (max-width: 850px) {
+            .about {
+                flex-direction: column;
+            }
+            .about img, .about-text {
+                width: 100%;
+            }
+        }
+    </style>
 </head>
+
 <body>
-<nav class="navbar navbar-expand-lg bg-body-tertiary">
-    <div "><img src="exto.png" width="50px"></div>
-  <div class="container-fluid">
-    <a class="navbar-brand" href="#">Navbar</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-      <div class="navbar-nav">
-        <a class="nav-link active" aria-current="page" href="home.html">Home</a>
-        <a class="nav-link" href="Buy tickets.html">Buy tickets</a>
-        <a class="nav-link" href="#">future</a>
-        <a class="nav-link disabled" aria-disabled="true">Disabled</a>
-      </div>
-    </div>
-  </div>
-</nav>
-  <!-- Navbar content -->
-</nav>
+
+    <!-- Header -->
+    <header>
+        <h2>TravelWorld</h2>
+        <nav>
+            <a href="#about">About</a>
+            <a href="#services">Services</a>
+            <a href="#destinations">Destinations</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <!-- Hero -->
+    <section class="hero">
+        <h1>Your Journey Starts Here</h1>
+        <p>Explore the world with our premium tourism services.</p>
+        <button>Book Now</button>
+    </section>
+
+    <!-- About -->
+    <section id="about">
+        <h2>About Us</h2>
+
+        <div class="about">
+            <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1000&q=80" alt="About Image">
+
+            <div class="about-text">
+                <p>
+                    We are a leading tourism company specialized in creating unique travel experiences.
+                    Our team provides world-class service, customized tours, and unforgettable adventures
+                    across the most beautiful destinations around the globe.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services -->
+    <section id="services">
+        <h2>Our Services</h2>
+
+        <div class="services">
+            <div class="service-box">
+                <h3>Flight Booking</h3>
+                <p>We offer competitive flight prices to worldwide destinations.</p>
+            </div>
+            <div class="service-box">
+                <h3>Hotel Reservation</h3>
+                <p>Choose from thousands of top-rated hotels and resorts.</p>
+            </div>
+            <div class="service-box">
+                <h3>Tour Packages</h3>
+                <p>Exclusive guided tours designed for all travel styles.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Destinations -->
+    <section id="destinations">
+        <h2>Top Destinations</h2>
+
+        <div class="destinations">
+            <div class="destination" style="background-image:url('https://images.unsplash.com/photo-1519125323398-675f0ddb6308');">
+                Maldives
+            </div>
+            <div class="destination" style="background-image:url('https://images.unsplash.com/photo-1505761671935-60b3a7427bad');">
+                Paris
+            </div>
+            <div class="destination" style="background-image:url('https://images.unsplash.com/photo-1473959383413-1f0b01f96d71');">
+                Egypt
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact">
+        <h2>Contact Us</h2>
+
+        <div class="contact">
+            <form>
+                <input type="text" placeholder="Your Name" required />
+                <input type="email" placeholder="Email Address" required />
+                <textarea rows="5" placeholder="Message"></textarea>
+                <button>Send Message</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        © 2025 TravelWorld. All Rights Reserved.
+    </footer>
+
 </body>
 </html>
