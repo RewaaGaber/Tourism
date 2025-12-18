@@ -1,90 +1,164 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ar" dir="rtl">
 <head>
-  </head>
-<style>
-   body { margin: 0;
-     font-family: Arial, sans-serif; 
-     background: #fff; 
-     color: #333; 
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>مصر ترافيل - اكتشف سحر مصر الفرعونية</title>
+    <style>
+        :root {
+            --gold: #d4af37;
+            --blue: #0c2340;
+            --sand: #f4e9d8;
+            --dark: #1a1a1a;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Segoe UI', Tahoma, sans-serif; background: var(--sand); color: #333; overflow-x: hidden; }
+        
+        /* Egyptian Pattern Overlay */
+        .pattern-overlay {
+            position: fixed; top: 0; left: 0; width: 100%; height: 100%; 
+            background: url('https://thumbs.dreamstime.com/b/vibrant-seamless-pattern-featuring-ancient-egyptian-hieroglyphs-iconic-symbols-like-ankh-eye-horus-stylized-397570046.jpg') repeat;
+            opacity: 0.05; pointer-events: none; z-index: -1;
+        }
 
-  }
-    /* NAVIGATION */ 
-    .nav { display: flex;
-       justify-content: space-between;
-        padding: 20px 50px;
-         font-weight: bold;
-         } 
-         .nav a { margin-right: 25px;
-           text-decoration: none;
-            color: #000; }
-             .nav .home { background: orange;
-               color: white !important; 
-               padding: 8px 12px;
-                border-radius: 6px;
-               } /* HERO SECTION */ 
-               .container { display: flex;
-                 justify-content: space-between;
-                  padding: 40px 60px;
-                   align-items: center; } 
-                   .text-box {
-                     max-width: 450px; }
-                    .text-box h2 { font-style: italic;
-                       color: #c67a2c; 
-                       font-size: 30px; 
-                       margin-bottom: 5px; } 
-                       .text-box h1 { font-size: 80px;
-                         margin: 0; 
-                         font-family: Georgia, serif; }
+        /* Navbar */
+        header {
+            position: fixed; top: 0; width: 100%;
+            background: rgba(12, 35, 64, 0.9); backdrop-filter: blur(10px);
+            z-index: 1000;
+        }
+        nav {
+            display: flex; justify-content: space-between; align-items: center;
+            padding: 1rem 5%; max-width: 1400px; margin: auto;
+        }
+        .logo { font-size: 2rem; color: var(--gold); font-weight: bold; }
+        .nav-links a { color: white; margin-left: 2rem; text-decoration: none; transition: 0.3s; }
+        .nav-links a:hover { color: var(--gold); }
 
-   .text-box p {
-     color: #666;
-     line-height: 1.5; } .btn {
-       display: inline-block;
-        margin-top: 20px;
-         background: orange;
-          color: #fff;
-           padding: 12px 20px;
-            border-radius: 25px;
-             text-decoration: none;
-              font-weight: bold;
-             } 
-             /* HEXAGON IMAGE */ 
-             .hexagon { width: 380px;
-              height: 330px;
-            
-               background-size: cover;
-                clip-path: polygon( 25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50% );
-               }
-                /* RESPONSIVE */ 
-                @media (max-width: 900px) 
-                { .container { flex-direction: column;
-                   text-align: center; } 
-                   .hexagon { margin-top: 30px; } 
-                   .text-box h1 { font-size: 50px; } }
-  </style>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        /* Hero with Parallax + Particles */
+        .hero {
+            height: 100vh; position: relative;
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.4)), url('https://images.tripadeal.com.au/cdn-cgi/image/format=auto,width=1200/https://cstad.s3.ap-southeast-2.amazonaws.com/6109_Jewels_of_Egypt_and_Arabia_WEB_HERO_1_Giza.jpg') center/cover no-repeat fixed;
+            display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; color: white;
+        }
+        .hero h1 {
+            font-size: 5rem; color: var(--gold); text-shadow: 0 0 20px black;
+            opacity: 0; animation: reveal 2s forwards;
+        }
+        .hero p { font-size: 1.8rem; margin: 1rem 0; opacity: 0; animation: reveal 2s forwards 1s; }
+        .btn { padding: 1.2rem 3rem; background: var(--gold); color: var(--dark); border-radius: 50px; font-size: 1.3rem; transition: 0.5s; opacity: 0; animation: reveal 2s forwards 1.5s; }
+        .btn:hover { transform: scale(1.1); box-shadow: 0 0 30px var(--gold); }
 
-  <title>Document</title>
+        @keyframes reveal { from { opacity: 0; transform: translateY(50px); } to { opacity: 1; transform: translateY(0); } }
+
+        /* Sections */
+        section { padding: 6rem 5%; max-width: 1400px; margin: auto; }
+        h2 { text-align: center; font-size: 3.5rem; color: var(--blue); margin-bottom: 4rem; position: relative; }
+        h2::after { content: ''; width: 100px; height: 4px; background: var(--gold); display: block; margin: 1rem auto; }
+
+        /* Destinations */
+        .destinations { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 3rem; }
+        .card {
+            border-radius: 20px; overflow: hidden; box-shadow: 0 15px 40px rgba(0,0,0,0.2);
+            transition: 0.6s; opacity: 0; transform: translateY(50px);
+        }
+        .card:hover { transform: translateY(-30px) scale(1.05); box-shadow: 0 0 50px rgba(212,175,55,0.4); }
+        .card img { height: 300px; object-fit: cover; transition: 0.6s; }
+        .card:hover img { transform: scale(1.2); }
+        .card-content { padding: 2rem; background: white; text-align: center; }
+        .card h3 { color: var(--blue); font-size: 1.8rem; }
+        .price { font-size: 2rem; color: var(--gold); font-weight: bold; }
+
+        /* Testimonials */
+        .testimonials { background: linear-gradient(to bottom, var(--sand), white); }
+
+        /* Footer */
+        footer { background: var(--blue); color: var(--gold); text-align: center; padding: 4rem; }
+
+        /* Responsive */
+        @media (max-width: 768px) { .hero h1 { font-size: 3.5rem; } }
+    </style>
 </head>
+<body>
+    <div class="pattern-overlay"></div>
 
-  <body> <!-- NAV -->
-     <div class="nav"> 
-      <div> <a class="home" href="#">HOME</a> 
-        <a href="#">ABOUT US</a> <a href="#">BLOG</a> 
-        <a href="#">CONTACT</a> </div> <div>YOUR LOGO</div> 
-      </div> 
-      <!-- HERO SECTION -->
-        <div class="container"> 
-          <div class="text-box"> 
-            <h2>Welcome to</h2>
-             <h1>Egypt</h1>
-              <p> Ancient Egypt had a complete writing system, political system and religious beliefs. The land of ancient Egypt is closely distributed along the Nile River Basin. </p>
-               <a class="btn" href="#">SEE MORE</a> 
-              </div> 
-              <div class="hexagon"></div>
-             </div>
+    <header>
+        <nav>
+            <div class="logo">مصر ترافيل</div>
+            <div class="nav-links">
+                <a href="#">الرئيسية</a>
+                <a href="#">البرامج</a>
+                <a href="#">الوجهات</a>
+                <a href="#">تواصل معنا</a>
+            </div>
+        </nav>
+    </header>
 
+    <section class="hero">
+        <h1>اكتشف سحر مصر الأبدي</h1>
+        <p>رحلات فاخرة إلى أرض الفراعنة، الأهرامات، والنيل الساحر</p>
+        <button class="btn">احجز رحلتك الآن</button>
+    </section>
+
+    <section class="destinations-section">
+        <h2>وجهات مصر الساحرة</h2>
+        <div class="destinations">
+            <div class="card">
+                <img src="https://cdn.kimkim.com/files/a/images/15aed193371c7dfb6796a8dfbb89ebad8045485f/original-495b0e2341f9b06e87826dc968ce018d.jpg" alt="الأهرامات">
+                <div class="card-content">
+                    <h3>الأهرامات والجيزة</h3>
+                    <p>عجائب الدنيا السبع</p>
+                    <div class="price">من ٨٠٠٠ جنيه</div>
+                </div>
+            </div>
+            <div class="card">
+                <img src="https://www.cairotoptours.com/storage/2690/conversions/Temple%20of%20Luxor%20%7C%20Egypt-webp.webp" alt="الأقصر">
+                <div class="card-content">
+                    <h3>الأقصر ومعابد الكرنك</h3>
+                    <p>متحف مفتوح للتاريخ</p>
+                    <div class="price">من ١٠٠٠٠ جنيه</div>
+                </div>
+            </div>
+            <div class="card">
+                <img src="https://images.travelandleisureasia.com/wp-content/uploads/sites/3/2024/05/31185732/Nile-scenery-with-sailboat-1.jpg?tr=w-1200,q-60" alt="كروز النيل">
+                <div class="card-content">
+                    <h3>كروز النيل الفاخر</h3>
+                    <p>رحلة سحرية على النيل</p>
+                    <div class="price">من ١٥٠٠٠ جنيه</div>
+                </div>
+            </div>
+            <div class="card">
+                <img src="https://tripidaysegytours.com/wp-content/uploads/2024/09/Giza-Pyramids-Tour-at-Cairo-and-Hurghada-Vacation-Tripidays-Egypt-Tours.jpg.webp" alt="شرم الشيخ">
+                <div class="card-content">
+                    <h3>شرم الشيخ والبحر الأحمر</h3>
+                    <p>جنة الغوص والشواطئ</p>
+                    <div class="price">من ٧٠٠٠ جنيه</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="testimonials">
+        <h2>آراء السياح السعداء</h2>
+        <!-- نفس السلايدر السابق أو أضف testimonials مصرية -->
+    </section>
+
+    <footer>
+        <p>&copy; 2025 مصر ترافيل - ارض الفراعنة تنتظرك</p>
+    </footer>
+
+    <script>
+        // Fade in cards
+        const cards = document.querySelectorAll('.card');
+        const observer = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = 1;
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, { threshold: 0.2 });
+        cards.forEach(card => observer.observe(card));
+    </script>
 </body>
 </html>
