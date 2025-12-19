@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>مصر ترافيل - اكتشف سحر مصر الفرعونية</title>
+    <title>Egypt Travel - Discover the magic of Pharaonic Egypt</title>
     <style>
         :root {
             --gold: #d4af37;
@@ -21,16 +21,31 @@
             opacity: 0.05; pointer-events: none; z-index: -1;
         }
 
-        /* Navbar */
-        header {
-            position: fixed; top: 0; width: 100%;
-            background: rgba(12, 35, 64, 0.9); backdrop-filter: blur(10px);
-            z-index: 1000;
-        }
         nav {
-            display: flex; justify-content: space-between; align-items: center;
-            padding: 1rem 5%; max-width: 1400px; margin: auto;
-        }
+        background-color: #333;
+        padding: 15px 0;
+        position: sticky;
+        top: 0;
+        z-index: 100;
+    }
+
+    nav ul {
+        list-style: none;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    nav a {
+        color: white;
+        text-decoration: none;
+        padding: 10px 20px;
+        transition: background 0.3s;
+    }
+
+    nav a:hover {
+        background-color: #667eea;
+    }
         .logo { font-size: 2rem; color: var(--gold); font-weight: bold; }
         .nav-links a { color: white; margin-left: 2rem; text-decoration: none; transition: 0.3s; }
         .nav-links a:hover { color: var(--gold); }
@@ -84,71 +99,89 @@
 
     <header>
         <nav>
-            <div class="logo">مصر ترافيل</div>
-            <div class="nav-links">
-                <a href="#">الرئيسية</a>
-                <a href="#">البرامج</a>
-                <a href="#">الوجهات</a>
-                <a href="#">تواصل معنا</a>
-            </div>
-        </nav>
+    <ul>
+        <li><a href="../html/landing page.html">Home</a></li>
+        <li><a href="../html/Company.html">Company</a></li>
+        <li><a href="../html/disabilty.html">Disability</a></li>
+        <li><a href="../html/contect us .html">Contact Us</a></li>
+        <li><a href="../html/login.html">Login</a></li>
+        <li><a href="../html/team work.html">Team Work</a></li>
+    </ul>
+</nav>
     </header>
 
     <section class="hero">
-        <h1>اكتشف سحر مصر الأبدي</h1>
-        <p>رحلات فاخرة إلى أرض الفراعنة، الأهرامات، والنيل الساحر</p>
-        <button class="btn">احجز رحلتك الآن</button>
+        <h1>Discover the timeless magic of Egypt</h1>
+        <p>Luxury trips to the land of the Pharaohs, the Pyramids, and the enchanting Nile </p>
+        <a href="https://www.egyptjoy.com/" class="btn">Book Your Trip Now</a>
     </section>
 
     <section class="destinations-section">
-        <h2>وجهات مصر الساحرة</h2>
+        <h2>Egypt's charming destinations</h2>
         <div class="destinations">
             <div class="card">
-                <img src="https://cdn.kimkim.com/files/a/images/15aed193371c7dfb6796a8dfbb89ebad8045485f/original-495b0e2341f9b06e87826dc968ce018d.jpg" alt="الأهرامات">
+                <img src="../photos/egypt 2.jpg" alt="الأهرامات">
                 <div class="card-content">
-                    <h3>الأهرامات والجيزة</h3>
-                    <p>عجائب الدنيا السبع</p>
-                    <div class="price">من ٨٠٠٠ جنيه</div>
+                    <h3>Giza Pyramids</h3>
+                    <p>Seven Wonders of the World</p>
+                    <div class="price">From 8,000 EGP</div>
                 </div>
             </div>
             <div class="card">
-                <img src="https://www.cairotoptours.com/storage/2690/conversions/Temple%20of%20Luxor%20%7C%20Egypt-webp.webp" alt="الأقصر">
+                <img src="../photos/combany photo ka.png" alt="الأقصر">
                 <div class="card-content">
-                    <h3>الأقصر ومعابد الكرنك</h3>
-                    <p>متحف مفتوح للتاريخ</p>
-                    <div class="price">من ١٠٠٠٠ جنيه</div>
+                    <h3>Karnak Temple in Luxor</h3>
+                    <p>Open museum for history</p>
+                    <div class="price">From 10,000 EGP</div>
                 </div>
             </div>
             <div class="card">
-                <img src="https://images.travelandleisureasia.com/wp-content/uploads/sites/3/2024/05/31185732/Nile-scenery-with-sailboat-1.jpg?tr=w-1200,q-60" alt="كروز النيل">
+                <img src="../photos/cpcu.png" alt="كروز النيل">
                 <div class="card-content">
-                    <h3>كروز النيل الفاخر</h3>
-                    <p>رحلة سحرية على النيل</p>
-                    <div class="price">من ١٥٠٠٠ جنيه</div>
+                    <h3>Royal Nile Cruise</h3>
+                    <p>Magical journey on the Nile</p>
+                    <div class="price">From 15,000 EGP</div>
                 </div>
             </div>
             <div class="card">
-                <img src="https://tripidaysegytours.com/wp-content/uploads/2024/09/Giza-Pyramids-Tour-at-Cairo-and-Hurghada-Vacation-Tripidays-Egypt-Tours.jpg.webp" alt="شرم الشيخ">
+                <img src="../photos/cpsm.png" alt="شرم الشيخ">
                 <div class="card-content">
-                    <h3>شرم الشيخ والبحر الأحمر</h3>
-                    <p>جنة الغوص والشواطئ</p>
-                    <div class="price">من ٧٠٠٠ جنيه</div>
+                    <h3>Sharm El Sheikh and Red Sea</h3>
+                    <p>Paradise of diving and beaches</p>
+                    <div class="price">From 7,000 EGP</div>
                 </div>
             </div>
         </div>
     </section>
 
     <section class="testimonials">
-        <h2>آراء السياح السعداء</h2>
-        <!-- نفس السلايدر السابق أو أضف testimonials مصرية -->
+        <h2>Happy Travelers' Reviews</h2>
+        <div class="destinations">
+            <div class="card">
+                <div class="card-content">
+                    <h3>Ahmed M.</h3>
+                    <p>"An unforgettable experience! The tour was well-organized, and the guides were knowledgeable. Egypt's history came alive!"</p>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-content">
+                    <h3>Sarah L.</h3>
+                    <p>"The Nile cruise was magical! Stunning views, luxurious accommodations, and delicious food. Highly recommend!"</p>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-content">
+                    <h3>John D.</h3>
+                    <p>"Visiting the Pyramids and temples was a dream come true. The cultural immersion and hospitality were exceptional."</p>
+                </div>
+            </div>
     </section>
 
     <footer>
-        <p>&copy; 2025 مصر ترافيل - ارض الفراعنة تنتظرك</p>
+        <p>&copy; 2025 Egypt Travel - The Land of the Pharaohs Awaits You</p>
     </footer>
 
     <script>
-        // Fade in cards
         const cards = document.querySelectorAll('.card');
         const observer = new IntersectionObserver(entries => {
             entries.forEach(entry => {
