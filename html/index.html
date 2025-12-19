@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Egypt Tourism - Explore the Land of Pharaohs</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f5f1e6;
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        header {
+            background: linear-gradient(135deg, #002147 0%, #00152e 100%);
+            color: white;
+            padding: 1rem 0;
+            text-align: center;
+        }
+        
+        .logo {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .logo span {
+            color: #D4AF37;
+        }
+        
+        nav {
+            background-color: #333;
+            padding: 15px 0;
+        }
+        
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+        
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 10px 20px;
+            transition: background 0.3s;
+            border-radius: 4px;
+        }
+        
+        nav a:hover {
+            background-color: #667eea;
+        }
+        
+        .hero {
+            height: 80vh;
+            background: linear-gradient(rgba(0, 33, 71, 0.7), rgba(0, 33, 71, 0.7)), url('../photos/egypt 2.jpg');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: white;
+            margin-bottom: 3rem;
+        }
+        
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+        
+        .hero p {
+            font-size: 1.5rem;
+            margin-bottom: 2rem;
+            max-width: 800px;
+        }
+        
+        .btn {
+            display: inline-block;
+            padding: 1rem 2.5rem;
+            background-color: #D4AF37;
+            color: #002147;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            font-size: 1.1rem;
+        }
+        
+        .btn:hover {
+            background-color: #c1a02a;
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+        
+        .welcome-section {
+            text-align: center;
+            padding: 3rem 0;
+            margin-bottom: 3rem;
+        }
+        
+        .welcome-section h2 {
+            font-size: 2.5rem;
+            color: #002147;
+            margin-bottom: 1.5rem;
+        }
+        
+        .welcome-section p {
+            font-size: 1.2rem;
+            max-width: 800px;
+            margin: 0 auto 2rem;
+            color: #555;
+        }
+        
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+        
+        .feature-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-10px);
+        }
+        
+        .feature-icon {
+            font-size: 3rem;
+            color: #D4AF37;
+            margin-bottom: 1rem;
+        }
+        
+        .feature-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: #002147;
+        }
+        
+        .pages-preview {
+            text-align: center;
+            padding: 3rem 0;
+            background-color: #002147;
+            color: white;
+            margin-bottom: 3rem;
+        }
+        
+        .pages-preview h2 {
+            font-size: 2.5rem;
+            margin-bottom: 2rem;
+        }
+        
+        .page-links {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+        }
+        
+        .page-link {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 1rem 2rem;
+            border-radius: 4px;
+            transition: all 0.3s ease;
+        }
+        
+        .page-link:hover {
+            background: rgba(212, 175, 55, 0.3);
+            transform: scale(1.05);
+        }
+        
+        footer {
+            background: #00152e;
+            color: #D4AF37;
+            text-align: center;
+            padding: 2rem 0;
+        }
+        
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+            
+            .hero p {
+                font-size: 1.2rem;
+            }
+            
+            nav ul {
+                flex-direction: column;
+                gap: 0.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1 class="logo">Egypt<span>.</span></h1>
+            <p>Discover the wonders of the ancient world</p>
+        </div>
+    </header>
+    
+    <nav>
+        <div class="container">
+            <ul>
+                <li><a href="landing page.html">Home</a></li>
+                <li><a href="Company.html">Company</a></li>
+                <li><a href="disabilty.html">Disability Support</a></li>
+                <li><a href="contect us .html">Contact Us</a></li>
+                <li><a href="login.html">Login</a></li>
+                <li><a href="team work.html">Team</a></li>
+            </ul>
+        </div>
+    </nav>
+    
+    <section class="hero">
+        <h1>Explore the Land of Pharaohs</h1>
+        <p>Discover ancient wonders, majestic landscapes, and timeless culture</p>
+        <a href="landing page.html" class="btn">Start Your Journey</a>
+    </section>
+    
+    <section class="welcome-section">
+        <div class="container">
+            <h2>Welcome to Egypt Tourism</h2>
+            <p>Experience the magic of Egypt with our carefully crafted tours that showcase the rich history, vibrant culture, and breathtaking beauty of this incredible country.</p>
+            <a href="Company.html" class="btn">Learn About Us</a>
+        </div>
+    </section>
+    
+    <div class="container">
+        <div class="features">
+            <div class="feature-card">
+                <div class="feature-icon">🏛️</div>
+                <h3>Ancient Wonders</h3>
+                <p>Visit the iconic Pyramids of Giza, the Sphinx, and temples along the Nile River.</p>
+            </div>
+            
+            <div class="feature-card">
+                <div class="feature-icon">🌊</div>
+                <h3>Red Sea Beaches</h3>
+                <p>Relax on pristine beaches and dive in crystal-clear waters of the Red Sea.</p>
+            </div>
+            
+            <div class="feature-card">
+                <div class="feature-icon">⛵</div>
+                <h3>Nile Cruises</h3>
+                <p>Sail along the historic Nile River and explore ancient sites from the water.</p>
+            </div>
+        </div>
+    </div>
+    
+    <section class="pages-preview">
+        <div class="container">
+            <h2>Explore Our Pages</h2>
+            <div class="page-links">
+                <div class="page-link">
+                    <a href="landing page.html">Main Landing Page</a>
+                </div>
+                <div class="page-link">
+                    <a href="Company.html">About Our Company</a>
+                </div>
+                <div class="page-link">
+                    <a href="disabilty.html">Disability Support</a>
+                </div>
+                <div class="page-link">
+                    <a href="contect us .html">Contact Us</a>
+                </div>
+                <div class="page-link">
+                    <a href="login.html">Login / Sign Up</a>
+                </div>
+                <div class="page-link">
+                    <a href="team work.html">Meet Our Team</a>
+                </div>
+            </div>
+            <p>Click on any page above to explore our website</p>
+        </div>
+    </section>
+    
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Egypt Tourism. All rights reserved.</p>
+            <p>Discover the wonders of the ancient world</p>
+        </div>
+    </footer>
+</body>
+</html>
