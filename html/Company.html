@@ -1,9 +1,11 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Egypt Travel - Discover the magic of Pharaonic Egypt</title>
+    <link rel="stylesheet" href="nav.css">
     <style>
         :root {
             --gold: #d4af37;
@@ -11,103 +13,199 @@
             --sand: #f4e9d8;
             --dark: #1a1a1a;
         }
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: 'Segoe UI', Tahoma, sans-serif; background: var(--sand); color: #333; overflow-x: hidden; }
-        
-        /* Egyptian Pattern Overlay */
-        .pattern-overlay {
-            position: fixed; top: 0; left: 0; width: 100%; height: 100%; 
-            background: url('https://thumbs.dreamstime.com/b/vibrant-seamless-pattern-featuring-ancient-egyptian-hieroglyphs-iconic-symbols-like-ankh-eye-horus-stylized-397570046.jpg') repeat;
-            opacity: 0.05; pointer-events: none; z-index: -1;
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
         }
 
-        nav {
-        background-color: #333;
-        padding: 15px 0;
-        position: sticky;
-        top: 0;
-        z-index: 100;
-    }
+        body {
+            font-family: 'Segoe UI', Tahoma, sans-serif;
+            background: var(--sand);
+            color: #333;
+            overflow-x: hidden;
+        }
 
-    nav ul {
-        list-style: none;
-        display: flex;
-        justify-content: center;
-        flex-wrap: wrap;
-    }
+        /* Egyptian Pattern Overlay */
+        .pattern-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('https://thumbs.dreamstime.com/b/vibrant-seamless-pattern-featuring-ancient-egyptian-hieroglyphs-iconic-symbols-like-ankh-eye-horus-stylized-397570046.jpg') repeat;
+            opacity: 0.05;
+            pointer-events: none;
+            z-index: -1;
+        }
 
-    nav a {
-        color: white;
-        text-decoration: none;
-        padding: 10px 20px;
-        transition: background 0.3s;
-    }
 
-    nav a:hover {
-        background-color: #667eea;
-    }
-        .logo { font-size: 2rem; color: var(--gold); font-weight: bold; }
-        .nav-links a { color: white; margin-left: 2rem; text-decoration: none; transition: 0.3s; }
-        .nav-links a:hover { color: var(--gold); }
 
         /* Hero with Parallax + Particles */
         .hero {
-            height: 100vh; position: relative;
-            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.4)), url('https://images.tripadeal.com.au/cdn-cgi/image/format=auto,width=1200/https://cstad.s3.ap-southeast-2.amazonaws.com/6109_Jewels_of_Egypt_and_Arabia_WEB_HERO_1_Giza.jpg') center/cover no-repeat fixed;
-            display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; color: white;
+            height: 100vh;
+            position: relative;
+            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.4)), url('https://images.tripadeal.com.au/cdn-cgi/image/format=auto,width=1200/https://cstad.s3.ap-southeast-2.amazonaws.com/6109_Jewels_of_Egypt_and_Arabia_WEB_HERO_1_Giza.jpg') center/cover no-repeat fixed;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: white;
         }
-        .hero h1 {
-            font-size: 5rem; color: var(--gold); text-shadow: 0 0 20px black;
-            opacity: 0; animation: reveal 2s forwards;
-        }
-        .hero p { font-size: 1.8rem; margin: 1rem 0; opacity: 0; animation: reveal 2s forwards 1s; }
-        .btn { padding: 1.2rem 3rem; background: var(--gold); color: var(--dark); border-radius: 50px; font-size: 1.3rem; transition: 0.5s; opacity: 0; animation: reveal 2s forwards 1.5s; }
-        .btn:hover { transform: scale(1.1); box-shadow: 0 0 30px var(--gold); }
 
-        @keyframes reveal { from { opacity: 0; transform: translateY(50px); } to { opacity: 1; transform: translateY(0); } }
+        .hero h1 {
+            font-size: 5rem;
+            color: var(--gold);
+            text-shadow: 0 0 20px black;
+            opacity: 0;
+            animation: reveal 2s forwards;
+        }
+
+        .hero p {
+            font-size: 1.8rem;
+            margin: 1rem 0;
+            opacity: 0;
+            animation: reveal 2s forwards 1s;
+        }
+
+        .btn {
+            padding: 1.2rem 3rem;
+            background: var(--gold);
+            color: var(--dark);
+            border-radius: 50px;
+            font-size: 1.3rem;
+            transition: 0.5s;
+            opacity: 0;
+            animation: reveal 2s forwards 1.5s;
+        }
+
+        .btn:hover {
+            transform: scale(1.1);
+            box-shadow: 0 0 30px var(--gold);
+        }
+
+        @keyframes reveal {
+            from {
+                opacity: 0;
+                transform: translateY(50px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
 
         /* Sections */
-        section { padding: 6rem 5%; max-width: 1400px; margin: auto; }
-        h2 { text-align: center; font-size: 3.5rem; color: var(--blue); margin-bottom: 4rem; position: relative; }
-        h2::after { content: ''; width: 100px; height: 4px; background: var(--gold); display: block; margin: 1rem auto; }
+        section {
+            padding: 6rem 5%;
+            max-width: 1400px;
+            margin: auto;
+        }
+
+        h2 {
+            text-align: center;
+            font-size: 3.5rem;
+            color: var(--blue);
+            margin-bottom: 4rem;
+            position: relative;
+        }
+
+        h2::after {
+            content: '';
+            width: 100px;
+            height: 4px;
+            background: var(--gold);
+            display: block;
+            margin: 1rem auto;
+        }
 
         /* Destinations */
-        .destinations { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 3rem; }
-        .card {
-            border-radius: 20px; overflow: hidden; box-shadow: 0 15px 40px rgba(0,0,0,0.2);
-            transition: 0.6s; opacity: 0; transform: translateY(50px);
+        .destinations {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 3rem;
         }
-        .card:hover { transform: translateY(-30px) scale(1.05); box-shadow: 0 0 50px rgba(212,175,55,0.4); }
-        .card img { height: 300px; object-fit: cover; transition: 0.6s; }
-        .card:hover img { transform: scale(1.2); }
-        .card-content { padding: 2rem; background: white; text-align: center; }
-        .card h3 { color: var(--blue); font-size: 1.8rem; }
-        .price { font-size: 2rem; color: var(--gold); font-weight: bold; }
+
+        .card {
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+            transition: 0.6s;
+            opacity: 0;
+            transform: translateY(50px);
+        }
+
+        .card:hover {
+            transform: translateY(-30px) scale(1.05);
+            box-shadow: 0 0 50px rgba(212, 175, 55, 0.4);
+        }
+
+        .card img {
+            height: 300px;
+            object-fit: cover;
+            transition: 0.6s;
+        }
+
+        .card:hover img {
+            transform: scale(1.2);
+        }
+
+        .card-content {
+            padding: 2rem;
+            background: white;
+            text-align: center;
+        }
+
+        .card h3 {
+            color: var(--blue);
+            font-size: 1.8rem;
+        }
+
+        .price {
+            font-size: 2rem;
+            color: var(--gold);
+            font-weight: bold;
+        }
 
         /* Testimonials */
-        .testimonials { background: linear-gradient(to bottom, var(--sand), white); }
+        .testimonials {
+            background: linear-gradient(to bottom, var(--sand), white);
+        }
 
         /* Footer */
-        footer { background: var(--blue); color: var(--gold); text-align: center; padding: 4rem; }
+        footer {
+            background: var(--blue);
+            color: var(--gold);
+            text-align: center;
+            padding: 4rem;
+        }
 
         /* Responsive */
-        @media (max-width: 768px) { .hero h1 { font-size: 3.5rem; } }
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 3.5rem;
+            }
+        }
     </style>
 </head>
+
 <body>
     <div class="pattern-overlay"></div>
 
     <header>
         <nav>
-    <ul>
-        <li><a href="../html/index.html">Home</a></li>
-        <li><a href="../html/Company.html">Company</a></li>
-        <li><a href="../html/disabilty.html">Disability</a></li>
-        <li><a href="../html/contect us .html">Contact Us</a></li>
-        <li><a href="../html/login.html">Login</a></li>
-        <li><a href="../html/team work.html">Team Work</a></li>
-    </ul>
-</nav>
+            <ul>
+                <li><a href="../html/index.html">Home</a></li>
+                <li><a href="../html/Company.html">Company</a></li>
+                <li><a href="../html/disabilty.html">Disability</a></li>
+                <li><a href="../html/contect us .html">Contact Us</a></li>
+                <li><a href="../html/login.html">Login</a></li>
+                <li><a href="../html/team work.html">Team Work</a></li>
+            </ul>
+        </nav>
     </header>
 
     <section class="hero">
@@ -160,19 +258,22 @@
             <div class="card">
                 <div class="card-content">
                     <h3>Ahmed M.</h3>
-                    <p>"An unforgettable experience! The tour was well-organized, and the guides were knowledgeable. Egypt's history came alive!"</p>
+                    <p>"An unforgettable experience! The tour was well-organized, and the guides were knowledgeable.
+                        Egypt's history came alive!"</p>
                 </div>
             </div>
             <div class="card">
                 <div class="card-content">
                     <h3>Sarah L.</h3>
-                    <p>"The Nile cruise was magical! Stunning views, luxurious accommodations, and delicious food. Highly recommend!"</p>
+                    <p>"The Nile cruise was magical! Stunning views, luxurious accommodations, and delicious food.
+                        Highly recommend!"</p>
                 </div>
             </div>
             <div class="card">
                 <div class="card-content">
                     <h3>John D.</h3>
-                    <p>"Visiting the Pyramids and temples was a dream come true. The cultural immersion and hospitality were exceptional."</p>
+                    <p>"Visiting the Pyramids and temples was a dream come true. The cultural immersion and hospitality
+                        were exceptional."</p>
                 </div>
             </div>
     </section>
@@ -194,4 +295,5 @@
         cards.forEach(card => observer.observe(card));
     </script>
 </body>
+
 </html>
