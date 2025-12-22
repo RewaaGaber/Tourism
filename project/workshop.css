@@ -1,0 +1,40 @@
+body {
+    font-family: Arial, sans-serif;
+    background: #f4f4f4;
+    margin: 0;
+    padding: 20px;
+    background-color: #023335;
+  color: #eff1ef;
+}
+
+.workshop {
+    padding: 20px;
+    border-radius: 12px;
+    border: 10px solid #dcdcdc;
+    margin-bottom: 25px;
+    color: #fbfafd;
+}
+.workshop h2 {
+    margin-top: 0;
+    font-size: 24px;
+    color: #ffffff;
+}
+.image-box {
+    color: #ffffff;
+    width: 100%;
+    height: 200px;
+    border-radius: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 15px;
+    color: #550303;
+    margin-bottom: 100px;
+    color: #ffffff;
+    gap: 25px;
+}
+.details {
+    font-size: 15px;
+    line-height: 1.6;
+    color: #ffffff;
+}
