@@ -1,23 +1,198 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <title>About_us</title>
-    <link rel="stylesheet" href="nav.css">
+<meta charset="UTF-8">
+<title>About Us | Exotoura</title>
+
+<style>
+body{
+    margin:0;
+    font-family: "Segoe UI", Arial, sans-serif;
+    background:#f5f7fa;
+    color:#333;
+}
+
+/* HERO */
+.hero{
+    height:90vh;
+    background:
+    linear-gradient(rgba(0,0,0,.55),rgba(0,0,0,.55)),
+    url("../photos/Egypt-GDP.jpg");
+    background-size:cover;
+    background-position:center;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    color:white;
+}
+
+.hero h1{
+    font-size:60px;
+    letter-spacing:3px;
+}
+
+.hero p{
+    font-size:22px;
+    margin-top:10px;
+}
+
+/* CONTAINER */
+.container{
+    max-width:1200px;
+    margin:auto;
+    padding:70px 20px;
+}
+
+/* SECTIONS */
+.section{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+    gap:40px;
+    align-items:center;
+    margin-bottom:80px;
+}
+
+.section img{
+    width:100%;
+    border-radius:18px;
+    box-shadow:0 15px 35px rgba(0,0,0,.15);
+}
+
+.section h2{
+    color:#0f4c75;
+    font-size:36px;
+    margin-bottom:15px;
+}
+
+.section p{
+    font-size:17px;
+    line-height:1.9;
+}
+
+/* FEATURES */
+.features{
+    text-align:center;
+}
+
+.features h2{
+    font-size:40px;
+    margin-bottom:40px;
+    color:#0f4c75;
+}
+
+.boxes{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:30px;
+}
+
+.box{
+    background:white;
+    padding:35px;
+    border-radius:18px;
+    box-shadow:0 10px 30px rgba(0,0,0,.08);
+}
+
+.box h3{
+    color:#203a43;
+    margin-bottom:10px;
+}
+
+/* FOOTER */
+footer{
+    background:#0f2027;
+    color:white;
+    text-align:center;
+    padding:25px;
+    font-size:14px;
+}
+</style>
 </head>
+
 <body>
-     <nav>
-            <ul>
-                <li><a href="../html/landing page.html">Home</a></li>
-                <li><a href="../html/Company.html">Company</a></li>
-                <li><a href="../html/disabilty.html">Disability</a></li>
-                <li><a href="../html/contect us .html">Contact Us</a></li>
-                <li><a href="../html/login.html">Login</a></li>
-                <li><a href="../html/team work.html">Team Work</a></li>
-                <li><a href="../project/volunteers.html">Volunteers</a></li>
-            </ul>
-        </nav>
+
+<!-- HERO -->
+<div class="hero">
+    <div>
+        <h1>EXOTOURA</h1>
+        <p>Discover Egypt Beyond Imagination</p>
+    </div>
+</div>
+
+<div class="container">
+
+<!-- WHO WE ARE -->
+<div class="section">
+    <div>
+        <h2>Who We Are</h2>
+        <p>
+            Exotoura is a premium travel company dedicated to delivering unforgettable
+            tourism experiences across Egypt. We combine culture, history, luxury,
+            and adventure to create journeys that last a lifetime.
+        </p>
+    </div>
+    <img src="https://images.unsplash.com/photo-1568322445389-f64ac2515020">
+</div>
+
+<!-- VISION -->
+<div class="section">
+    <img src="https://images.unsplash.com/photo-1518684079-3c830dcef090">
+    <div>
+        <h2>Our Vision</h2>
+        <p>
+            To become a global symbol of Egyptian tourism, offering authentic,
+            safe, and inspiring experiences that connect travelers with the
+            soul of Egypt.
+        </p>
+    </div>
+</div>
+
+<!-- MISSION -->
+<div class="section">
+    <div>
+        <h2>Our Mission</h2>
+        <p>
+            Our mission is to provide world-class tourism services by combining
+            expert planning, professional guides, and personalized experiences
+            that showcase Egypt’s heritage and natural beauty.
+        </p>
+    </div>
+    <img src="https://images.unsplash.com/photo-1541339907198-e08756dedf3f">
+</div>
+
+<!-- FEATURES -->
+<div class="features">
+    <h2>Why Choose Exotoura?</h2>
+
+    <div class="boxes">
+        <div class="box">
+            <h3>Professional Guides</h3>
+            <p>Certified and experienced guides bringing history to life.</p>
+        </div>
+
+        <div class="box">
+            <h3>Luxury & Comfort</h3>
+            <p>Carefully selected hotels, cruises, and transport.</p>
+        </div>
+
+        <div class="box">
+            <h3>Unique Destinations</h3>
+            <p>From pyramids and temples to deserts and the Red Sea.</p>
+        </div>
+
+        <div class="box">
+            <h3>Trusted Service</h3>
+            <p>Your satisfaction and safety are our top priorities.</p>
+        </div>
+    </div>
+</div>
+
+</div>
+
+<footer>
+© 2025 Exotoura – All Rights Reserved
+</footer>
+
 </body>
 </html>
