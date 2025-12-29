@@ -117,7 +117,8 @@
 
     <main class="container">
       <h1>contact-form</h1>
-      <form id="contact-form" class="card">
+     <form id="contact-form" class="card">
+
         <label
           >name
           <input type="text" name="name" id="name" required />
@@ -143,18 +144,26 @@
       </form>
     </main>
 
-    <script>
-      function sendMail() {
-        let parms = {
-          name: document.getElementById("name").value,
-          email: document.getElementById("email").value,
-          subject: document.getElementById("subject").value,
-          massage: document.getElementById("message").value,
-        };
-        emailjs
-          .send("service_v20ie6j", "template_zsc2uqb", parms)
-          .then(arelt("Email sent!!"));
-      }
-    </script>
+   <script>
+document.getElementById("contact-form").addEventListener("submit", function(e) {
+  e.preventDefault();
+
+  let params = {
+    name: document.getElementById("name").value,
+    email: document.getElementById("email").value,
+    subject: document.getElementById("subject").value,
+    message: document.getElementById("message").value,
+  };
+
+  emailjs.send("service_v20ie6j", "template_zsc2uqb", params)
+    .then(function() {
+      alert("Email sent successfully ✅");
+    }, function(error) {
+      alert("Error ❌");
+      console.log(error);
+    });
+});
+</script>
+
   </body>
 </html>
