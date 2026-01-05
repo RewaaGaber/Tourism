@@ -3,10 +3,15 @@
     {
       "src": "html/**/*",
       "use": "@vercel/static"
+    },
+    {
+      "src": "project/**/*",
+      "use": "@vercel/static"
     }
   ],
   "routes": [
-    { "src": "/", "dest": "/html/index.html" },
-    { "src": "/(.+)$", "dest": "/html/$1" }
+    { "src": "/project/(.*)", "dest": "/project/$1" },
+    { "src": "/(.+)$", "dest": "/html/$1" },
+    { "src": "/", "dest": "/html/index.html" }
   ]
 }
