@@ -12,7 +12,7 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Lato:wght@300;400;700&display=swap"
         rel="stylesheet">
-
+    <link rel="stylesheet" href="nav.css">
 
     <style>
         :root {
@@ -128,76 +128,7 @@
         }
 
 
-        nav {
-            background-color: #333;
-            padding: 15px 0;
-            position: sticky;
-            top: 0;
-            z-index: 100;
-        }
 
-        nav ul {
-            list-style: none;
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-        }
-
-        nav a {
-            color: white;
-            text-decoration: none;
-            padding: 10px 20px;
-            transition: background 0.3s;
-        }
-
-        nav a:hover {
-            background-color: #667eea;
-        }
-
-
-        .nav-container {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .logo {
-            font-family: var(--font-heading);
-            font-size: 1.8rem;
-            color: var(--color-white);
-            font-weight: 700;
-        }
-
-        .logo-accent {
-            color: var(--color-gold);
-        }
-
-        .nav-links {
-            display: flex;
-            gap: 2rem;
-            align-items: center;
-        }
-
-        .nav-links a {
-            color: var(--color-white);
-            font-size: 0.95rem;
-            font-weight: 400;
-            letter-spacing: 0.5px;
-        }
-
-        .nav-links a:hover {
-            color: var(--color-gold);
-        }
-
-        .nav-links .btn-primary {
-            padding: 0.5rem 1.5rem;
-            font-size: 0.85rem;
-            color: var(--color-blue-dark);
-        }
-
-        .nav-links .btn-primary:hover {
-            color: var(--color-gold);
-        }
 
         .hamburger {
             display: none;
@@ -215,9 +146,10 @@
 
 
         .hero {
-            height: 100vh;
-            background:  url('../photos/egypt 2.jpg');
-            /* Fallback/Placeholder URL */
+            height: 95vh;
+            background: url('../photos/home2.png');
+            /* add blur effect */
+
             background-size: cover;
             background-position: center;
             background-attachment: fixed;
@@ -599,7 +531,7 @@
 <body>
 
     <header>
-         <nav>
+        <nav>
             <ul>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="Company.html">Company</a></li>
@@ -631,8 +563,7 @@
             <p class="fade-in delay-1">Explore the land of pharaohs, golden sands, and the eternal Nile.</p>
             <div class="hero-buttons fade-in delay-2">
                 <a href="project.html" class="btn-primary">Explore Destinations</a>
-                <a href="../html/about.html" class="btn-secondary">Learn More</a>
-                <a href="../html/login.html" class="btn-secondary">Learn More</a>
+                <a href="login.html" class="btn-secondary">Learn More</a>
             </div>
         </div>
     </header>
