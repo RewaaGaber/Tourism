@@ -1,4 +1,4 @@
-# Exatoura Egypt Tourism Project - Comprehensive Documentation
+ # Exatoura Egypt Tourism Project - Comprehensive Documentation
 
 ## Project Overview
 
@@ -20,8 +20,8 @@ To ensure that every tourist, regardless of their financial means or physical ab
 ## Team Members & Roles
 
 - **Adam Wessam** - Project Leader & Web Developer
-- **Moaz Ahmed** - Project Manager
-- **Malek Ahmed** - UI/UX Designer
+- **Moaz Ahmed** - Project Manager  & Web Developer
+- **Malek Ahmed** - UI/UX Designer & Web Developer
 - **Mohamed Kamal** - Web Developer
 - **Yossef** - Web Developer
 
