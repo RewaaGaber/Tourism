@@ -144,6 +144,22 @@
             transition: var(--transition-standard);
         }
 
+        #nav-toggle:checked ~ .hamburger .bar:nth-child(2) {
+            opacity: 0;
+        }
+
+        #nav-toggle:checked ~ .hamburger .bar:nth-child(1) {
+            transform: translateY(8px) rotate(45deg);
+        }
+
+        #nav-toggle:checked ~ .hamburger .bar:nth-child(3) {
+            transform: translateY(-8px) rotate(-45deg);
+        }
+
+        #nav-toggle:checked ~ .nav-links {
+            right: 0;
+        }
+
 
         .hero {
             height: 95vh;
@@ -470,12 +486,48 @@
         .scroll-reveal {
             opacity: 0;
             transform: translateY(30px);
-            transition: all 0.8s ease-out;
+            animation: revealOnScroll 0.8s ease-out forwards;
+            animation-timeline: view(75%);
+            animation-delay: 0s;
         }
 
-        .scroll-reveal.active {
-            opacity: 1;
-            transform: translateY(0);
+        .scroll-reveal.delay-1 {
+            animation-delay: 0.1s;
+        }
+
+        .scroll-reveal.delay-2 {
+            animation-delay: 0.2s;
+        }
+
+        .scroll-reveal.delay-3 {
+            animation-delay: 0.3s;
+        }
+
+        @keyframes revealOnScroll {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @supports not (animation-timeline: view()) {
+            .scroll-reveal {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        #nav-toggle {
+            display: none;
+        }
+
+        .nav-links a {
+            display: block;
+        }
+
+        /* Close menu when clicking on a nav link */
+        .nav-links a:target {
+            border: none;
         }
 
 
@@ -492,24 +544,12 @@
                 transition: 0.3s;
             }
 
-            .nav-links.active {
-                right: 0;
-            }
-
             .hamburger {
                 display: block;
             }
 
-            .hamburger.active .bar:nth-child(2) {
-                opacity: 0;
-            }
-
-            .hamburger.active .bar:nth-child(1) {
-                transform: translateY(8px) rotate(45deg);
-            }
-
-            .hamburger.active .bar:nth-child(3) {
-                transform: translateY(-8px) rotate(-45deg);
+            #nav-toggle:checked ~ .nav-links {
+                right: 0;
             }
 
             .hero h1 {
@@ -530,8 +570,9 @@
 
 <body>
     <header>
+        <input type="checkbox" id="nav-toggle">
         <nav>
-            <ul>
+            <ul class="nav-links">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="Company.html">Company</a></li>
                 <li><a href="disabilty.html">Disability</a></li>
@@ -545,14 +586,12 @@
                 <li><a href="login.html">Login</a></li>
             </ul>
         </nav>
+        <label for="nav-toggle" class="hamburger">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </label>
     </header>
-    <div class="hamburger">
-        <span class="bar"></span>
-        <span class="bar"></span>
-        <span class="bar"></span>
-    </div>
-    </div>
-    </nav>
 
 
     <header id="hero" class="hero">
@@ -701,56 +740,6 @@
         </div>
     </footer>
 
-    <script>document.addEventListener('DOMContentLoaded', () => {
-
-            const hamburger = document.querySelector('.hamburger');
-            const navLinks = document.querySelector('.nav-links');
-
-            if (hamburger) {
-                hamburger.addEventListener('click', () => {
-                    hamburger.classList.toggle('active');
-                    navLinks.classList.toggle('active');
-                });
-            }
-
-
-            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-                anchor.addEventListener('click', function (e) {
-                    e.preventDefault();
-
-
-                    if (navLinks.classList.contains('active')) {
-                        navLinks.classList.remove('active');
-                        hamburger.classList.remove('active');
-                    }
-
-                    document.querySelector(this.getAttribute('href')).scrollIntoView({
-                        behavior: 'smooth'
-                    });
-                });
-            });
-
-
-            const revealElements = document.querySelectorAll('.scroll-reveal');
-
-            const revealOnScroll = () => {
-                const windowHeight = window.innerHeight;
-                const elementVisible = 150;
-
-                revealElements.forEach((element) => {
-                    const elementTop = element.getBoundingClientRect().top;
-
-                    if (elementTop < windowHeight - elementVisible) {
-                        element.classList.add('active');
-                    }
-                });
-            };
-
-            window.addEventListener('scroll', revealOnScroll);
-
-            revealOnScroll();
-        });
-    </script>
 </body>
 
 </html> 
