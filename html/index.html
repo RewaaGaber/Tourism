@@ -14,263 +14,252 @@
         rel="stylesheet">
     <link rel="stylesheet" href="nav.css">
 
-  <style>
-    /* RESET */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-/* BASIC */
-body {
-    font-family: 'Lato', sans-serif;
-    background: #F5F1E6;
-    color: #333;
-    line-height: 1.6;
-}
+        body {
+            font-family: 'Lato', sans-serif;
+            background: #F5F1E6;
+            color: #333;
+            line-height: 1.6;
+        }
 
-h1, h2, h3, h4 {
-    font-family: 'Playfair Display', serif;
-    color: #002147;
-}
+        h1, h2, h3, h4 {
+            font-family: 'Playfair Display', serif;
+            color: #002147;
+        }
 
-a {
-    text-decoration: none;
-    color: inherit;
-}
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
 
-ul {
-    list-style: none;
-}
+        ul {
+            list-style: none;
+        }
 
-img {
-    max-width: 100%;
-    display: block;
-}
+        img {
+            max-width: 100%;
+            display: block;
+        }
 
-.container {
-    width: 90%;
-    max-width: 1200px;
-    margin: auto;
-}
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: auto;
+        }
 
-/* TEXT */
-.text-gold {
-    color: #D4AF37;
-}
+        .text-gold {
+            color: #D4AF37;
+        }
 
-.center-text {
-    text-align: center;
-}
+        .center-text {
+            text-align: center;
+        }
 
-/* BUTTONS */
-.btn-primary {
-    padding: 15px 35px;
-    background: #D4AF37;
-    color: #002147;
-    font-weight: bold;
-    border: 2px solid #D4AF37;
-    display: inline-block;
-}
+        .btn-primary {
+            padding: 15px 35px;
+            background: #D4AF37;
+            color: #002147;
+            font-weight: bold;
+            border: 2px solid #D4AF37;
+            display: inline-block;
+        }
 
-.btn-secondary {
-    padding: 15px 35px;
-    background: transparent;
-    color: white;
-    font-weight: bold;
-    border: 2px solid white;
-    display: inline-block;
-}
+        .btn-secondary {
+            padding: 15px 35px;
+            background: transparent;
+            color: white;
+            font-weight: bold;
+            border: 2px solid white;
+            display: inline-block;
+        }
 
-/* HERO */
-.hero {
-    height: 95vh;
-    background: url('../photos/home2.png') center/cover no-repeat;
-    display: flex;
-    align-items: center;
-    color: white;
-    position: relative
-}
+        .hero {
+            height: 95vh;
+            background: url('../photos/home2.png') center/cover no-repeat;
+            display: flex;
+            align-items: center;
+            color: white;
+            position: relative
+        }
 
-.hero h1 {
-    font-size: 4rem;
-    margin-bottom: 20px;
-    color: white;
-}
+        .hero h1 {
+            font-size: 4rem;
+            margin-bottom: 20px;
+            color: white;
+        }
 
-.hero p {
-    font-size: 1.2rem;
-    margin-bottom: 30px;
-    max-width: 600px;
-}
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+            max-width: 600px;
+        }
 
-.hero-buttons {
-    display: flex;
-    gap: 15px;
-}
+        .hero-buttons {
+            display: flex;
+            gap: 15px;
+        }
 
-/* SECTIONS */
-.section {
-    padding: 80px 0;
-}
+        .section {
+            padding: 80px 0;
+        }
 
-/* ABOUT */
-.about-grid {
-    display: flex;
-    gap: 50px;
-    align-items: center;
-}
+        .about-grid {
+            display: flex;
+            gap: 50px;
+            align-items: center;
+        }
 
-.about-grid > div {
-    width: 50%;
-}
+        .about-grid > div {
+            width: 50%;
+        }
 
-.about-text h2 {
-    font-size: 3rem;
-    margin-bottom: 20px;
-}
+        .about-text h2 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+        }
 
-.about-text p {
-    color: #666;
-    margin-bottom: 25px;
-}
+        .about-text p {
+            color: #666;
+            margin-bottom: 25px;
+        }
 
-.feature-list li {
-    font-weight: bold;
-    margin-bottom: 10px;
-}
+        .feature-list li {
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
 
-/* DESTINATIONS */
-.destinations {
-    background: white;
-}
+        .destinations {
+            background: white;
+        }
 
-.section-header h2 {
-    font-size: 3rem;
-    margin-bottom: 10px;
-}
+        .section-header h2 {
+            font-size: 3rem;
+            margin-bottom: 10px;
+        }
 
-.destination-grid {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 6px;
-    justify-content: space-evenly;
-}
+        .destination-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 6px;
+            justify-content: space-evenly;
+        }
 
-.card {
-    background: white;
-    width: 250px;
-    border-radius: 8px;
-    overflow: hidden;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-}
+        .card {
+            background: white;
+            width: 250px;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
 
-.card-image {
-    height: 300px;
-    background-size: cover;
-    background-position: center;
-}
+        .card-image {
+            height: 300px;
+            background-size: cover;
+            background-position: center;
+        }
 
-.card-content {
-    padding: 25px;
-}
+        .card-content {
+            padding: 25px;
+        }
 
-.card-content h3 {
-    margin-bottom: 5px;
-}
+        .card-content h3 {
+            margin-bottom: 5px;
+        }
 
-.card-content p {
-    color: #666;
-    margin-bottom: 15px;
-}
+        .card-content p {
+            color: #666;
+            margin-bottom: 15px;
+        }
 
-.card-link {
-    color: #D4AF37;
-    font-weight: bold;
-}
+        .card-link {
+            color: #D4AF37;
+            font-weight: bold;
+        }
 
-/* WHY US */
-.why-us {
-    background: #002147;
-    color: white;
-    text-align: center;
-}
+        .why-us {
+            background: #002147;
+            color: white;
+            text-align: center;
+        }
 
-.why-us h2 {
-    color: white;
-    font-size: 3rem;
-    margin-bottom: 30px;
-}
+        .why-us h2 {
+            color: white;
+            font-size: 3rem;
+            margin-bottom: 30px;
+        }
 
-.section-subtitle {
-    color: rgba(255,255,255,0.8);
-    margin-bottom: 40px;
-}
+        .section-subtitle {
+            color: rgba(255,255,255,0.8);
+            margin-bottom: 40px;
+        }
 
-.features-grid {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 25px;
-    text-align: left;
-}
+        .features-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 25px;
+            text-align: left;
+        }
 
-.feature-card {
-    background: rgba(255,255,255,0.08);
-    padding: 25px;
-    width: 250px;
-    border-radius: 8px;
-}
+        .feature-card {
+            background: rgba(255,255,255,0.08);
+            padding: 25px;
+            width: 250px;
+            border-radius: 8px;
+        }
 
-.feature-card h3 {
-    color: #D4AF37;
-    margin-bottom: 10px;
-}
+        .feature-card h3 {
+            color: #D4AF37;
+            margin-bottom: 10px;
+        }
 
-/* FOOTER */
-.footer {
-    background: #00152e;
-    color: white;
-    padding: 60px 0 20px;
-}
+        .footer {
+            background: #00152e;
+            color: white;
+            padding: 60px 0 20px;
+        }
 
-.footer-grid {
-    display: flex;
-    gap: 40px;
-    margin-bottom: 40px;
-}
+        .footer-grid {
+            display: flex;
+            gap: 40px;
+            margin-bottom: 40px;
+        }
 
-.footer h4 {
-    color: #D4AF37;
-    margin-bottom: 15px;
-}
+        .footer h4 {
+            color: #D4AF37;
+            margin-bottom: 15px;
+        }
 
-.footer-bottom {
-    text-align: center;
-    opacity: 0.6;
-}
+        .footer-bottom {
+            text-align: center;
+            opacity: 0.6;
+        }
 
-/* MOBILE */
-@media (max-width: 768px) {
-    .about-grid,
-    .features-grid,
-    .footer-grid {
-        flex-direction: column;
-    }
+        @media (max-width: 768px) {
+            .about-grid,
+            .features-grid,
+            .footer-grid {
+                flex-direction: column;
+            }
 
-    .about-grid > div {
-        width: 100%;
-    }
+            .about-grid > div {
+                width: 100%;
+            }
 
-    .hero h1 {
-        font-size: 2.5rem;
-    }
-}
-
-  </style>
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+        }
+    </style>
 </head>
 
 <body>
+
     <header>
         <input type="checkbox" id="nav-toggle">
         <nav>
@@ -295,7 +284,6 @@ img {
         </label>
     </header>
 
-
     <header id="hero" class="hero">
         <div class="hero-overlay"></div>
         <div class="container hero-content">
@@ -308,7 +296,6 @@ img {
         </div>
     </header>
 
-
     <section id="about" class="section about">
         <div class="container about-grid">
             <div class="about-text scroll-reveal">
@@ -317,17 +304,16 @@ img {
                     queens, marvel at architectural feats that defy logic, and immerse yourself in a culture as deep as
                     the Nile itself.</p>
                 <ul class="feature-list">
-                    <li><span class="icon">🏛️</span> 7,000 Years of History</li>
-                    <li><span class="icon">🌊</span> Pristine Red Sea Beaches</li>
-                    <li><span class="icon">🏜️</span> Majestic Desert Safaris</li>
+                    <li>🏛️ 7,000 Years of History</li>
+                    <li>🌊 Pristine Red Sea Beaches</li>
+                    <li>🏜️ Majestic Desert Safaris</li>
                 </ul>
             </div>
             <div class="about-image scroll-reveal delay-1">
-                <img src="../photos/egypt.jpeg" alt="Majestic View of Egypt" class="about-img">
+                <img src="../photos/egypt.jpeg" alt="Majestic View of Egypt">
             </div>
         </div>
     </section>
-
 
     <section id="destinations" class="section destinations">
         <div class="container">
@@ -335,113 +321,98 @@ img {
                 <h2>Top Destinations</h2>
                 <p>Curated experiences for the discerning traveler.</p>
             </div>
-            <div class="destination-grid">
 
-                <div class="card scroll-reveal">
-                    <div class="card-image" style="background-image: url('../photos/pyramids.jpeg');"></div>
+            <div class="destination-grid">
+                <div class="card">
+                    <div class="card-image" style="background-image:url('../photos/pyramids.jpeg');"></div>
                     <div class="card-content">
                         <h3>The Great Pyramids</h3>
                         <p>Giza</p>
-                        <a href="https://mota.gov.eg/ar/%D8%A7%D9%84%D8%A2%D8%AB%D8%A7%D8%B1-%D9%88%D8%A7%D9%84%D9%85%D8%AA%D8%A7%D8%AD%D9%81/%D8%A7%D9%84%D9%85%D8%AC%D9%84%D8%B3-%D8%A7%D9%84%D8%A3%D8%B9%D9%84%D9%89-%D9%84%D9%84%D8%A2%D8%AB%D8%A7%D8%B1/%D8%AF%D9%84%D9%8A%D9%84-%D8%A7%D9%84%D9%85%D9%88%D8%A7%D9%82%D8%B9-%D8%A7%D9%84%D8%A3%D8%AB%D8%B1%D9%8A%D8%A9-%D8%A7%D9%84%D9%85%D9%81%D8%AA%D9%88%D8%AD%D8%A9-%D9%84%D9%84%D8%B2%D9%8A%D8%A7%D8%B1%D8%A9-%D8%AC%D8%AF%D9%8A%D8%AF/%D9%85%D9%86%D8%B7%D9%82%D8%A9-%D8%A3%D9%87%D8%B1%D8%A7%D9%85%D8%A7%D8%AA-%D8%A7%D9%84%D8%AC%D9%8A%D8%B2%D8%A9/"
-                            class="card-link">Discover &rarr;</a>
+                        <a href="#" class="card-link">Discover →</a>
                     </div>
                 </div>
 
-                <div class="card scroll-reveal delay-1">
-                    <div class="card-image" style="background-image: url('../photos/luxor.jpeg');"></div>
+                <div class="card">
+                    <div class="card-image" style="background-image:url('../photos/luxor.jpeg');"></div>
                     <div class="card-content">
                         <h3>Valley of the Kings</h3>
                         <p>Luxor</p>
-                        <a href="https://www.facebook.com/p/%D8%A7%D9%84%D8%B5%D9%81%D8%AD%D8%A9-%D8%A7%D9%84%D8%B1%D8%B3%D9%85%D9%8A%D8%A9-%D9%84%D9%85%D8%AD%D8%A7%D9%81%D8%B8%D8%A9-%D8%A7%D9%84%D8%A3%D9%82%D8%B5%D8%B1-100064631171669/?locale=ar_AR"
-                            class="card-link">Discover &rarr;</a>
+                        <a href="#" class="card-link">Discover →</a>
                     </div>
                 </div>
 
-                <div class="card scroll-reveal delay-2">
-                    <div class="card-image" style="background-image: url('../photos/phiala temple.jpeg');"></div>
+                <div class="card">
+                    <div class="card-image" style="background-image:url('../photos/phiala temple.jpeg');"></div>
                     <div class="card-content">
                         <h3>Philae Temple</h3>
                         <p>Aswan</p>
-                        <a href="https://www.facebook.com/aswan.gov.eg/?locale=ar_AR" class="card-link">Discover
-                            &rarr;</a>
+                        <a href="#" class="card-link">Discover →</a>
                     </div>
                 </div>
 
-                <div class="card scroll-reveal delay-3">
-                    <div class="card-image" style="background-image: url('../photos/coral reefs.png');"></div>
+                <div class="card">
+                    <div class="card-image" style="background-image:url('../photos/coral reefs.png');"></div>
                     <div class="card-content">
                         <h3>Red Sea Coral Reefs</h3>
                         <p>Sharm El Sheikh</p>
-                        <a href="https://www.facebook.com/groups/180009788724230/" class="card-link">Discover &rarr;</a>
+                        <a href="#" class="card-link">Discover →</a>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-
-    <section id="features" class="section why-us">
+    <section class="section why-us">
         <div class="container">
-            <div class="why-us-content scroll-reveal">
-                <h2>Why Choose Us?</h2>
-                <p class="section-subtitle">We don't just offer trips; we craft unforgettable memories.</p>
+            <h2>Why Choose Us?</h2>
+            <p class="section-subtitle">We craft unforgettable memories.</p>
 
-                <div class="features-grid">
-                    <div class="feature-card">
-                        <div class="feature-icon">🛡️</div>
-                        <h3>Safety First</h3>
-                        <p>Your safety is our top priority. We adhere to the highest international safety standards to
-                            ensure a worry-free journey.</p>
-                    </div>
-                    <div class="feature-card">
-                        <div class="feature-icon">🎓</div>
-                        <h3>Expert Local Guides</h3>
-                        <p>Discover the secrets of Egypt with our licensed Egyptologists who bring history to life with
-                            passion and deep knowledge.</p>
-                    </div>
-                    <div class="feature-card">
-                        <div class="feature-icon">💎</div>
-                        <h3>Best Value</h3>
-                        <p>Luxury doesn't have to break the bank. We offer premium experiences at competitive prices
-                            with no hidden fees.</p>
-                    </div>
-                    <div class="feature-card">
-                        <div class="feature-icon">🎧</div>
-                        <h3>24/7 Support</h3>
-                        <p>From the moment you book until you return home, our dedicated support team is available
-                            around the clock to assist you.</p>
-                    </div>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <h3>Safety First</h3>
+                    <p>Your safety is our priority.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>Expert Guides</h3>
+                    <p>Licensed Egyptologists.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>Best Value</h3>
+                    <p>Premium experiences.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>24/7 Support</h3>
+                    <p>Always here for you.</p>
                 </div>
             </div>
         </div>
     </section>
 
-
-    <footer id="contact" class="footer">
+    <footer class="footer">
         <div class="container footer-grid">
-            <div class="footer-brand">
-                <a href="#" class="logo">Egypt<span class="logo-accent">.</span></a>
-                <p>Unveiling the mysteries of the past, today.</p>
+            <div>
+                <h4>Egypt</h4>
+                <p>Unveiling history.</p>
             </div>
-            <div class="footer-links">
+            <div>
                 <h4>Explore</h4>
                 <ul>
-                    <li><a href="#hero">Home</a></li>
-                    <li><a href="#destinations">Destinations</a></li>
-                    <li><a href="#about">About</a></li>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Destinations</a></li>
+                    <li><a href="#">About</a></li>
                 </ul>
             </div>
-            <div class="footer-contact">
+            <div>
                 <h4>Contact</h4>
                 <p>info@visit-egypt.com</p>
                 <p>+201024886690</p>
             </div>
         </div>
         <div class="footer-bottom">
-            <p>&copy; 2025 Egypt Tourism. All rights reserved.</p>
+            <p>© 2025 Egypt Tourism</p>
         </div>
     </footer>
 
 </body>
 
-</html> 
+</html>
