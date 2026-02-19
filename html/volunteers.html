@@ -5,25 +5,43 @@
     <title>Exotoura Volunteer</title>
     <link rel="stylesheet" href="volunteer.css" />
     <link rel="stylesheet" href="nav.css">
+    <script src="https://cdn.emailjs.com/sdk/3.2.0/email.min.js"></script>
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"
+    ></script>
+    <script type="text/javascript">
+      (function () {
+        emailjs.init({
+          publicKey: "XZrj0LNYgpA5Ysevl",
+        });
+      })();
+    </script>
   </head>
   <body>
   <header>
     <input type="checkbox" id="nav-toggle">
     <nav>
-      <ul class="nav-links">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="Company.html">Company</a></li>
-        <li><a href="disabilty.html">Disability</a></li>
-        <li><a href="contect us .html">Contact Us</a></li>
-        <li><a href="team work.html">Team Work</a></li>
-        <li><a href="volunteers.html">Volunteers</a></li>
-        <li><a href="vr.html">VR</a></li>
-        <li><a href="about_us.html">About Us</a></li>
-        <li><a href="../project/workshop.html">Workshop</a></li>
-        <li><a href="library.html">Library</a></li>
-        <li><a href="login.html">Login</a></li>
-      </ul>
-    </nav>
+                <div class="logo">ExoToura</div>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="Company.html">Company</a></li>
+                    <li><a href="disabilty.html">Disability</a></li>
+                    <li><a href="volunteers.html">Volunteer</a></li>
+                    <li><a href="workshop.html">Workshops</a></li>
+                    <li><a href="vr.html">VR</a></li>
+                    <li><a href="library.html">Library</a></li>
+                    <li><a href="about_us.html">About</a></li>
+                    <li><a href="team work.html">Team</a></li>
+                    <li><a href="contect us .html">Inquire</a></li>
+                    <li><a href="login.html" class="btn btn-secondary"
+                            style="padding: 8px 20px; font-size: 0.8rem;">Login</a></li>
+                </ul>
+            </nav>
     <label for="nav-toggle" class="hamburger">
       <span class="bar"></span>
       <span class="bar"></span>
@@ -130,5 +148,28 @@
       </div>
     </div>
     <footer>© ExoToura Tourism</footer>
+    <script>
+
+    
+    document.getElementById("contact-form").addEventListener("submit", function(e) {
+  e.preventDefault();
+
+  let params = {
+    name: document.getElementById("name").value,
+    email: document.getElementById("email").value,
+    subject: document.getElementById("subject").value,
+    message: document.getElementById("message").value,
+  };
+
+  emailjs.send("service_v20ie6j", "template_zsc2uqb", params)
+    .then(function() {
+      alert("Email sent successfully ✅");
+    }, function(error) {
+      alert("Error ❌");
+      console.log(error);
+    });
+});
+</script>
+<script src="script.js"></script>
   </body>
 </html>
